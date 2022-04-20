@@ -1,6 +1,7 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  ssr: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -34,8 +35,45 @@ export default {
     '@nuxtjs/tailwindcss',
   ],
 
+  axios: {
+    baseURL: process.env.BASE_URL ? process.env.BASE_URL : 'http://127.0.0.1:8000',
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
+  ],
+
+  auth: {
+    strategies: {
+      local: {
+        user: {
+          property: 'user',
+          // autoFetch: true
+        },
+        token: {
+          type: 'token',
+          global: true,
+          // maxAge: 4 hours
+        },
+        endpoints: {
+          login: { url: '/api/v1/auth/login/', method: 'post' },
+          logout: false,
+          user: { url: '/api/v1/users/', method: 'get' }
+        }
+      }
+    },
+    redirect: {
+      home: '/',
+      callback: false,
+      login: '/auth/login/',
+      logout: '/auth/login/',
+    }
+  },
+  router: {
+    middleware: ['auth']
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
