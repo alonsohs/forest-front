@@ -29,14 +29,13 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
 
   axios: {
     baseURL: process.env.BASE_URL ? process.env.BASE_URL : 'http://127.0.0.1:8000',
+
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
