@@ -39,7 +39,7 @@ export default {
   ],
 
   axios: {
-    baseURL: process.env.BASE_URL ? process.env.BASE_URL : 'http://127.0.0.1:8000',
+    baseURL: process.env.BASE_URL ? process.env.BASE_URL : 'http://localhost:8000',
 
   },
 
@@ -64,7 +64,7 @@ export default {
         endpoints: {
           login: { url: '/api/v1/auth/login/', method: 'post' },
           logout: false,
-          user: { url: '/api/v1/users/', method: 'get' }
+          user: false,
         }
       }
     },
