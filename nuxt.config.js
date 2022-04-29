@@ -5,7 +5,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'mediconect-app',
+    title: 'Mediconect',
     htmlAttrs: {
       lang: 'es',
     },
@@ -53,18 +53,16 @@ export default {
     strategies: {
       local: {
         user: {
-          property: 'user',
           // autoFetch: true
         },
         token: {
-          type: 'token',
           global: true,
           // maxAge: 4 hours
         },
         endpoints: {
           login: { url: '/api/v1/auth/login/', method: 'post' },
           logout: false,
-          user: false,
+          user: { url: '/api/v1/profile/me'},
         }
       }
     },

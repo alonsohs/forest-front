@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full bg-white rounded-md shadow-md text-center">
-    Hola Mundo
-
-    {{$auth.user}}
+  <div class="w-full bg-white rounded-md shadow-md text-center space-y-4">
+    <div>
+      {{$auth.user}}
+    </div>
     <button @click="userLogout">Logout</button>
   </div>
 </template>
@@ -15,7 +15,6 @@ export default {
     userLogout() {
       this.$auth.logout()
     },
-
   }
 }
 </script>
