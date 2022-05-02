@@ -3,7 +3,7 @@
     <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
       <div class="mx-auto w-full max-w-sm lg:w-96">
         <div>
-          <img class="h-16 w-auto" src="@/assets/blue-logo.svg" alt="Workflow" />
+          <img class="h-20 w-auto" src="@/assets/blue-logo.svg" alt="Workflow" />
           <h2 class="mt-6 text-3xl font-extrabold text-gray-900">INICIO DE SESIÓN</h2>
         </div>
 
@@ -33,7 +33,7 @@
               </div>
 
               <div>
-                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-doc-blue-100 hover:bg-cyan-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-doc-blue-200">Iniciar sesión</button>
+                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-doc-blue-100 hover:bg-doc-blue-200 transition transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-doc-blue-200">Iniciar sesión</button>
               </div>
             </form>
           </div>
