@@ -12,7 +12,7 @@
       </div>
     </a>
     <button @click="userLogout">
-      <img src="@/assets/sign-out.svg" class="h-8 w-8" alt="profile picture">
+      <img src="~/assets/menu/sign-out.svg" class="h-8 w-8" alt="profile picture">
       <!--          <span>cerrar sesión</span>-->
     </button>
   </div>
