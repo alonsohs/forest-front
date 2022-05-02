@@ -24,7 +24,6 @@ import {io} from "socket.io-client";
 
 const socket = io('ws://localhost:8000')
 
-
 export default {
   name: "index",
   layout: 'app',
@@ -37,12 +36,12 @@ export default {
   mounted() {
     const rfidReaderId = this.$auth.user?.rfid_reader?.id
 
-    socket.on('connect', () => {
-      this.connectionStatus = 'Conectado'
-      console.log('connected to server');
-    })
-
     socket.emit('connected', rfidReaderId)
+
+    socket.on('connected_id', (socketID) => {
+      console.log(socketID)
+      this.connectionStatus = 'Conectado'
+    })
 
     socket.on('rfid_read', (patient) => {
       console.log('RFID read')
@@ -57,6 +56,7 @@ export default {
     })
   },
   updated() {
+    console.log('Updated')
     const rfidReaderId = this.$auth.user?.rfid_reader?.id
     socket.emit('connected', rfidReaderId)
   }

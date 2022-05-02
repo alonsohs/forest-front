@@ -12,20 +12,16 @@
           </button>
         </div>
 
-        <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+        <div class="flex-1 h-0 py-8 overflow-y-auto">
           <div class="logo-containers flex items-center px-4 gap-4">
             <div>
-              <img class="h-10 w-10" src="@/assets/blue-logo.svg" alt="logo">
+              <img class="h-12 w-12" src="@/assets/blue-logo.svg" alt="logo">
             </div>
             <div>
-              <img class="w-32" src="@/assets/mediconect.svg" alt="mediconect">
+              <img class="w-36" src="@/assets/mediconect.svg" alt="mediconect">
             </div>
           </div>
-          <nav class="mt-5 px-2 space-y-1">
-            <MenuItem name="My Info" alt="My info" image="heartbeat.svg" to="/" />
-            <MenuItem name="Reader" alt="Reader" image="user-md.svg" />
-            <MenuItem name="Help" alt="Help" image="help.svg" />
-          </nav>
+          <Menu />
         </div>
         <MenuItemProfile name="Fernando" />
       </div>
@@ -39,16 +35,12 @@
     <div class="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
       <!-- Sidebar component, swap this element with another sidebar if you like -->
       <div class="flex-1 flex flex-col min-h-0 bg-gray-800">
-        <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+        <div class="flex-1 flex flex-col py-8 overflow-y-auto">
           <div class="flex items-center flex-shrink-0 px-4 gap-4">
-            <img class="h-10 w-10" src="@/assets/blue-logo.svg" alt="logo">
-            <img class="w-32" src="@/assets/mediconect.svg" alt="mediconect">
+            <img class="h-12 w-12" src="@/assets/blue-logo.svg" alt="logo">
+            <img class="w-36" src="@/assets/mediconect.svg" alt="mediconect">
           </div>
-          <nav class="mt-5 flex-1 px-2 space-y-1">
-            <MenuItem name="My Info" alt="My info" image="heartbeat.svg" to="/" />
-            <MenuItem name="Reader" alt="team2" image="user-md.svg" to="/doctor/rfid-reader"/>
-            <MenuItem name="Help" alt="team2" image="help.svg" />
-          </nav>
+          <Menu />
         </div>
         <MenuItemProfile name="Fernando" />
       </div>
