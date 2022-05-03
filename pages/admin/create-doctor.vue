@@ -81,6 +81,13 @@
           Create Doctor
         </button>
       </div>
+      <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+        <button type="button"
+                @click="uploadImage"
+                class="inline-flex max-w-max items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          Upload image
+        </button>
+      </div>
     </div>
   </main>
 </template>
@@ -125,8 +132,20 @@ export default {
 
       this.$axios.post('/api/v1/doctors', formdata)
     },
+    uploadImage() {
+      const formdata = new FormData()
+      formdata.append('image', this.profileImage)
+      this.$axios.post('/api/v1/upload/image', formdata)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+    },
     setImage(e) {
-      this.profileImage = e.target.files[0]
+      const file = e.target.files[0]
+      const reader = new FileReader()
+      reader.readAsDataURL(file)
+      reader.onloadend = () => {
+        this.profileImage = reader.result
+      }
     }
   }
 }
