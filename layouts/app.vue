@@ -15,10 +15,10 @@
         <div class="flex-1 h-0 py-8 overflow-y-auto">
           <div class="logo-containers flex items-center px-4 gap-4">
             <div>
-              <img class="h-12 w-12" src="@/assets/blue-logo.svg" alt="logo">
+              <img class="h-12 w-12" src="@/assets/logo.png" alt="logo">
             </div>
             <div>
-              <img class="w-36" src="@/assets/mediconect.svg" alt="mediconect">
+              <h1 class="text-white">FOREST</h1>
             </div>
           </div>
           <Menu />
@@ -37,8 +37,8 @@
       <div class="flex-1 flex flex-col min-h-0 bg-gray-800">
         <div class="flex-1 flex flex-col py-8 overflow-y-auto">
           <div class="flex items-center flex-shrink-0 px-4 gap-4">
-            <img class="h-12 w-12" src="@/assets/blue-logo.svg" alt="logo">
-            <img class="w-36" src="@/assets/mediconect.svg" alt="mediconect">
+            <img class="h-12 w-12" src="@/assets/logo.png" alt="logo">
+            <h1 class="text-white">FOREST</h1>
           </div>
           <Menu />
         </div>

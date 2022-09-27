@@ -1,8 +1,10 @@
 <template>
   <div class="pt-2">
-    <nav v-if="$auth.user.user.role === 'doctor'" class="mt-5 flex-1 px-2 space-y-1">
-      <MenuItem name="Mi información" alt="Mi información" image="user-md.svg" to="/" />
-      <MenuItem name="Lector RFID" alt="Lector RFID" image="heartbeat.svg" to="/doctor/rfid-reader"/>
+    <nav  class="mt-5 flex-1 px-2 space-y-1">
+      <MenuItem name="Inicio" alt="Mi información" image="menu.svg" to="/" />
+      <MenuItem name="Mis Equipos" alt="Lector RFID"  image="menu.svg" to="/inicio"/>
+      <MenuItem name="Mis Proyectos" alt="Lector RFID"  image="menu.svg" to="/inicio"/>
+      <MenuItem name="Mi Perfil" alt="Lector RFID"  image="menu.svg" to="/inicio"/>
     </nav>
   </div>
 </template>

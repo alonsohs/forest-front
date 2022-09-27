@@ -5,7 +5,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Mediconect',
+    title: 'Forest',
     htmlAttrs: {
       lang: 'es',
     },
@@ -21,6 +21,9 @@ export default {
       { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossOrigin: true},
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap'},
     ],
+    script: [
+      { src: 'https://kit.fontawesome.com/358acff005.js', crossOrigin: 'anonymous'}
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
