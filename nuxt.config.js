@@ -2,7 +2,7 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   ssr: false,
-
+  mode: 'spa',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Forest',
@@ -43,7 +43,7 @@ export default {
 
   axios: {
     baseURL: process.env.BASE_URL ? process.env.BASE_URL : 'http://localhost:8000',
-
+    withCredentials: true,
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -63,9 +63,9 @@ export default {
           // maxAge: 4 hours
         },
         endpoints: {
-          login: { url: '/api/v1/auth/login/', method: 'post' },
-          logout: false,
-          user: { url: '/api/v1/profile/me'},
+          login: { url: '/api/login', method: 'post' },
+          logout: { url: '/api/logout'},
+          user: { url: '/api/user' },
         }
       }
     },

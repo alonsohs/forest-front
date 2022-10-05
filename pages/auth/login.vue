@@ -68,7 +68,9 @@ export default {
           password: this.password
         }
       })
-        .then(res => console.log('Exitooooo', res))
+        .then(res => {
+          console.log('login:', this.$auth)
+        })
         .catch(err => console.log(err))
     },
   },
