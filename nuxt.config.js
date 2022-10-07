@@ -23,7 +23,8 @@ export default {
     ],
     script: [
       { src: 'https://kit.fontawesome.com/358acff005.js', crossOrigin: 'anonymous'},
-      { src: './TW-ELEMENTS-PATH/dist/js/index.min.js'}
+      { src: './TW-ELEMENTS-PATH/dist/js/index.min.js'},
+      {src: "https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js", charset: "utf-8"}
     ]
   },
 
