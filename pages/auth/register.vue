@@ -12,8 +12,16 @@
         <div class="mt-8">
 
           <div class="mt-6">
-            <form @submit.prevent="createUser" class="space-y-6">
-              <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
+            <form @submit.prevent="createUser" class="space-y-4">
+              <div class="grid sm:gap-2 sm:items-start sm:pt-2">
+                <label for="first-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Nombre de Usuario </label>
+                <div class="input__container mt-1 sm:mt-0 sm:col-span-2">
+                  <input v-model="username" type="text"
+                         class="input max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                </div>
+              </div>
+
+              <div class="grid sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 ">
                 <label for="first-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Nombre </label>
                 <div class="input__container mt-1 sm:mt-0 sm:col-span-2">
                   <input v-model="name" type="text"
@@ -21,23 +29,15 @@
                 </div>
               </div>
 
-              <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="last-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Apellido paterno </label>
+              <div class="grid sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 ">
+                <label for="last-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Apellidos </label>
                 <div class="input__container mt-1 sm:mt-0 sm:col-span-2">
-                  <input v-model="fathers_lastname" type="text"
+                  <input v-model="last_name" type="text"
                          class="input max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
                 </div>
               </div>
 
-              <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="last-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Apellido materno </label>
-                <div class="input__container mt-1 sm:mt-0 sm:col-span-2">
-                  <input v-model="mothers_lastname" type="text"
-                         class="input max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                </div>
-              </div>
-
-              <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <div class="grid sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 ">
                 <label for="last-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Fecha de nacimiento  </label>
                 <div class="input__container mt-1 sm:mt-0 sm:col-span-2">
                   <input v-model="date_of_birth" type="date"
@@ -45,7 +45,7 @@
                 </div>
               </div>
 
-              <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <div class="grid sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 ">
                 <label for="last-name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Teléfono  </label>
                 <div class="input__container mt-1 sm:mt-0 sm:col-span-2">
                   <input v-model="phone" type="tel"
@@ -54,7 +54,7 @@
               </div>
 
 
-              <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <div class="grid sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 ">
                 <label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Email  </label>
                 <div class="input__container mt-1 sm:mt-0 sm:col-span-2">
                   <input v-model="user.email" type="email"
@@ -62,10 +62,20 @@
                 </div>
               </div>
 
-              <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                <label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Contraseña  </label>
+              <div class="grid sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 ">
+                <div>
+                  <p class="text-xs block">La contraseña debe tener al menos 8 caracteres y al menos un número y un caracter especial</p>
+                  <label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Contraseña  </label>
+                </div>
                 <div class="input__container mt-1 sm:mt-0 sm:col-span-2">
                   <input v-model="user.password" type="password"
+                         class="input block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+                </div>
+              </div>
+              <div class="grid sm:gap-2 sm:items-start sm:border-t sm:border-gray-200 ">
+                <label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Confirmar Contraseña  </label>
+                <div class="input__container mt-1 sm:mt-0 sm:col-span-2">
+                  <input v-model="user.confirmPassword" type="password"
                          class="input block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
                 </div>
               </div>
@@ -93,34 +103,34 @@ export default {
   components: {},
   data() {
     return {
+      username: '',
       name: '',
-      fathers_lastname: '',
+      last_name: '',
       mothers_lastname: '',
       date_of_birth: '',
       phone: '',
       gender: '',
       user: {
         email: '',
-        password: ''
+        password: '',
+        confirmPassword: '',
       }
     }
   },
   methods: {
     createUser() {
       const data = {
+        username: this.username,
         name: this.name,
-        fathers_lastname: this.fathers_lastname,
-        mothers_lastname: this.mothers_lastname,
+        last_name: this.last_name,
         date_of_birth: this.date_of_birth,
         phone: this.phone,
         gender: 'Otro',
-        user: {
-          email: this.user.email,
-          password: this.user.password,
-        }
+        email: this.user.email,
+        password: this.user.password,
       }
 
-      this.$axios.post('/api/v1/patients', data)
+      this.$axios.post('/api/register', data)
         .then(() => {
           this.userLogin()
         })
@@ -142,7 +152,7 @@ export default {
 
 <style scoped>
   .input {
-    height: 100%;
+    height: 2rem;
     border: 1px solid #b7b7b7;
     padding: 0 .5rem;
   }

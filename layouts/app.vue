@@ -54,7 +54,7 @@
           </svg>
         </button>
       </div>
-      <main class="flex-1">
+      <main class="flex-1 bg-gray-50 min-h-screen">
         <div class="py-6">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
             <!-- Replace with your content -->

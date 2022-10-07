@@ -22,7 +22,8 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap'},
     ],
     script: [
-      { src: 'https://kit.fontawesome.com/358acff005.js', crossOrigin: 'anonymous'}
+      { src: 'https://kit.fontawesome.com/358acff005.js', crossOrigin: 'anonymous'},
+      { src: './TW-ELEMENTS-PATH/dist/js/index.min.js'}
     ]
   },
 
@@ -30,7 +31,9 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    {src: '@/plugins/tailwind-components.js'}
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
