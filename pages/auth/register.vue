@@ -107,7 +107,6 @@ export default {
       username: '',
       name: '',
       last_name: '',
-      mothers_lastname: '',
       date_of_birth: '',
       phone: '',
       gender: '',
@@ -151,7 +150,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
   .input {
     height: 2rem;
     border: 1px solid #b7b7b7;
